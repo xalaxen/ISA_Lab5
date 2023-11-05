@@ -31,7 +31,7 @@ namespace Lab5
         [JsonProperty("id")]
         int id;
         [JsonProperty("bdate")]
-        string bdate = "hidden";
+        string bdate = "скрыт";
         [JsonProperty("first_name")]
         string first_name;
         [JsonProperty("last_name")]
@@ -41,11 +41,11 @@ namespace Lab5
 
         public override string ToString()
         {
-            return $@"id = {id}
-name = {first_name}
-surname = {last_name}
-bdate = {bdate}
-city = {(city!=null ? city.Title : "not stated")}";
+            return $@"id: {id}
+Имя: {first_name}
+Фамилия: {last_name}
+Дата рождения: {bdate}
+Город: {(city!=null ? city.Title : "не указан")}";
         }
     }
 }

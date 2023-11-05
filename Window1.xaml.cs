@@ -14,10 +14,6 @@ using System.Windows.Shapes;
 
 namespace Lab5
 {
-    /// <summary>
-    /// Логика взаимодействия для Window1.xaml
-    /// System.IO.IOException: "Cannot locate resource 'mainwindow.xaml'."
-    /// </summary>
     public partial class Window1 : Window
     {
         VkApp vkApp;

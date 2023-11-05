@@ -18,7 +18,9 @@
         </Grid.ColumnDefinitions>
 
         <TextBox x:Name="InfoTB" Grid.ColumnSpan="3" Margin="10" FontSize="16"/>
-        <Button x:Name="GetProfileInfoBTN" Content="Get info" Margin="20" Grid.Column="0" Grid.Row="1" Click="GetProfileInfoBTN_Click"/>
-        <Button x:Name="GetFriendsListBTN" Content="Get friends" Margin="20" Grid.Column="2" Grid.Row="1" Click="GetFriendsListBTN_Click"/>
+        <Button x:Name="GetProfileInfoBTN" Margin="20" Grid.Column="0" Grid.Row="1" Click="GetProfileInfoBTN_Click">
+            <TextBlock>Информация <LineBreak/> об аккаунте</TextBlock>
+        </Button>
+        <Button x:Name="GetFriendsListBTN" Content="Список друзей" Margin="20" Grid.Column="2" Grid.Row="1" Click="GetFriendsListBTN_Click"/>
     </Grid>
 </Window>

@@ -30,13 +30,13 @@ namespace Lab5
 
         public override string ToString()
         {
-            return $@"Information about account:
-id = {id}
-name = {first_name}
-surname = {last_name}
-screen name = {screen_name}
-hometown = {home_town}
-bdate = {bdate}";
+            return $@"Информация об аккаунте:
+id: {id}
+Имя: {first_name}
+Фамилия: {last_name}
+Отображаемое имя: {screen_name}
+Город: {home_town}
+Дата рождения: {bdate}";
         }
     }
 }
