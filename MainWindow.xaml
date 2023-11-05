@@ -1,0 +1,19 @@
+﻿<Window x:Class="Lab5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        xmlns:local="clr-namespace:Lab5" d:DataContext="{d:DesignInstance Type=local:VkApp}"
+        mc:Ignorable="d"
+        Title="LogIn" Height="500" Width="400" ResizeMode="NoResize">
+
+    <Grid x:Name="LoginGrid" Background="#FFDADADA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.*"/>
+            <RowDefinition Height=".2*"/>
+        </Grid.RowDefinitions>
+        <cefSharp:ChromiumWebBrowser x:Name="browser" Grid.Row="0" Margin="10 10 10 0" FrameLoadEnd="browser_FrameLoadEnd"/>
+        <Button x:Name="loginBtn" Content="LogIn" Command="{Binding LogInCommand}" Grid.Row="1" Height="50" Width="200" HorizontalAlignment="Center" Margin="10 0 0 0"/>
+    </Grid>
+</Window>
