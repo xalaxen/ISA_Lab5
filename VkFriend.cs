@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,45 @@ using System.Threading.Tasks;
 
 namespace Lab5
 {
-    internal class VkFriend
+    public class FriendResponse
     {
+        public int Count { get; set; }
+        [JsonProperty("items")]
+        public List<VkFriend> Items { get; set; }
+    }
+
+    public class RootObject
+    {
+        [JsonProperty("response")]
+        public FriendResponse Response { get; set; }
+    }
+
+    public class City
+    {
+        [JsonProperty("title")]
+        public string Title { get; set; }
+    }
+
+    public class VkFriend
+    {
+        [JsonProperty("id")]
+        int id;
+        [JsonProperty("bdate")]
+        string bdate = "hidden";
+        [JsonProperty("first_name")]
+        string first_name;
+        [JsonProperty("last_name")]
+        string last_name;
+        [JsonProperty("city")]
+        City city;
+
+        public override string ToString()
+        {
+            return $@"id = {id}
+name = {first_name}
+surname = {last_name}
+bdate = {bdate}
+city = {(city!=null ? city.Title : "not stated")}";
+        }
     }
 }

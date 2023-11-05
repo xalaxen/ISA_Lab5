@@ -21,10 +21,11 @@ namespace Lab5
     public partial class Window1 : Window
     {
         VkApp vkApp;
+
         public Window1(VkApp model)
         {
             InitializeComponent();
-            vkApp = new VkApp(ref model, ref InfoTB, ref GetProfileInfoBTN, ref GetFriendsListBTN);
+            vkApp = new VkApp(ref model, ref InfoTB);
         }
 
         private void GetProfileInfoBTN_Click(object sender, RoutedEventArgs e)
